@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pantry.View.PantryView">
+    <ContentPage.Content>
+        <StackLayout Spacing="10" Padding="10">
+            <Label Text="Welcome to Mark's Pantry!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="34"/>
+            <ListView x:Name="listPantry">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell  Text="{Binding Name}" TextColor="Purple" Detail="{Binding Quantity}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="ButtonScanner" Text="Scan"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
